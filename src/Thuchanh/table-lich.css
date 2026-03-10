@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    text-align:center;
+}
+
+h1{
+    color:#1f4bd8;
+}
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:2px solid #bbb;
+    height:70px;
+    font-size:28px;
+    text-align:center;
+    background:#eee;
+}
+
+.week-vn th{
+    background:orange;
+    color:white;
+    font-size:22px;
+}
+
+.week-vn .sun{
+    background:red;
+}
+
+.week-vn .sat{
+    background:#1f4bd8;
+}
+
+.week-en td{
+    background:white;
+    font-size:18px;
+}
+
+.sun{
+    color:red;
+}
+
+.sat{
+    color:#1f4bd8;
+}
+
+sub{
+    font-size:14px;
+    color:black;
+}
