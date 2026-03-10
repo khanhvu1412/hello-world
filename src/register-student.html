@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+    <link rel="stylesheet" href="register-student.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">ĐĂNG KÝ HỌC VIÊN</div>
+
+    <form>
+
+        <div class="form-group">
+            <label>Họ và tên</label>
+            <input type="text" name="fullName">
+        </div>
+
+        <div class="form-group">
+            <label>Ngày sinh</label>
+            <input type="text" name="date">
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính</label>
+
+            <div class="radio-group">
+                <input type="radio" name="gender"> Nam
+                <input type="radio" name="gender"> Nữ
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label>Địa chỉ</label>
+            <textarea name="address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Lớp</label>
+
+            <select>
+                <option>-- Chọn lớp --</option>
+                <option>C0224</option>
+                <option>C0324</option>
+                <option>C0424</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label>Điện thoại</label>
+            <input type="tel" name="phone">
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Đăng ký</button>
+            <button type="reset">Nhập lại</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
