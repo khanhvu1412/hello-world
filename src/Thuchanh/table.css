@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#e6e6e6;
+    padding:20px;
+}
+
+.title{
+    text-align:center;
+    color:#1e50ff;
+    font-size:40px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 160px;
+    color:#1e50ff;
+}
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:#f2f2f2;
+}
+
+th, td{
+    border:2px solid #777;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#fff200;
+}
+
+.header2 th{
+    background:#f4a300;
+}
