@@ -44,3 +44,17 @@ audio{
     width:100%;
     margin-top:5px;
 }
+
+.question .btn{
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.question .btn:hover {
+    background-color: #8dff8e;
+    color: #4CAF50;
+}

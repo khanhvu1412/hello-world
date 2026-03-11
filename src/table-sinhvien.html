@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng thông tin sinh viên</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Số thứ tự</th>
+        <th>Họ tên</th>
+        <th>Quê quán</th>
+        <th>Tuổi</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Đỗ Khánh Vũ</td>
+        <td>Hà Nội</td>
+        <td class="age">21</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Nguyễn Thu Hoài</td>
+        <td>Đà Nẵng</td>
+        <td class="age">20</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Nguyễn Quang Đạt</td>
+        <td>Hà Nội</td>
+        <td class="age">21</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Đinh Văn Khải</td>
+        <td>Huế</td>
+        <td class="age">25</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Lê Văn Thái</td>
+        <td>Hà Nội</td>
+        <td class="age">28</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Đặng Văn Nguyên</td>
+        <td>Quảng Nam</td>
+        <td class="age">30</td>
+    </tr>
+    <tr>
+        <td colspan="3">Tổng</td>
+        <td id="total"></td>
+
+    </tr>
+    <tr>
+        <td colspan="3">Tuổi trung bình</td>
+        <td id="average"></td>
+    </tr>
+</table>
+
+<script>
+
+    let ages = document.querySelectorAll(".age");
+    let total = 0;
+
+    ages.forEach(function (age) {
+        total += Number(age.textContent);
+    });
+
+    let count = ages.length;
+    let average = (total / count).toFixed(2);
+
+    document.getElementById("total").innerText = count;
+    document.getElementById("average").innerText = average;
+
+</script>
+</body>
+</html>
