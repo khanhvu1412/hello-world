@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="chuyendoitien.css">
+</head>
+
+<body>
+
+<h2>Ứng dụng chuyển đổi tiền tệ</h2>
+
+<div class="converter">
+
+    <div class="row">
+        <label>Amount</label>
+        <input type="number" id="amount" value="1">
+    </div>
+
+    <div class="row">
+        <label>From Currency</label>
+        <select id="fromCurrency">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+        <option value="7.2">CNY</option>
+        <option value="150">JPY</option>
+    </select>
+    </div>
+
+    <div class="row">
+        <label>To Currency</label>
+        <select id="toCurrency">
+            <option value="23000">VND</option>
+            <option value="1">USD</option>
+            <option value="7.2">CNY</option>
+            <option value="150">JPY</option>
+        </select>
+    </div>
+
+    <button onclick="convertMoney()">Convert</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script src="chuyendoitien.js"></script>
+
+</body>
+</html>
