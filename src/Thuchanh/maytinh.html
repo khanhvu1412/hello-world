@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <link rel="stylesheet" href="maytinh.css">
+</head>
+
+<body>
+<div class="calculator">
+    <h1>Máy tính</h1>
+
+    <div class="input-group">
+        <input id="numbera" type="number" placeholder="Number 1">
+        <input id="numberb" type="number" placeholder="Number 2">
+    </div>
+
+    <div class="buttons">
+        <button onclick="calculator('+')">Cộng (+)</button>
+        <button onclick="calculator('-')">Trừ (-)</button>
+        <button onclick="calculator('*')">Nhân (x)</button>
+        <button onclick="calculator('/')">Chia (/)</button>
+    </div>
+
+    <p class="result">Kết quả : <span id="result-calculate"></span></p>
+
+</div>
+
+<script>
+    function calculator(operation) {
+        let a = Number(document.getElementById("numbera").value);
+        let b = Number(document.getElementById("numberb").value);
+
+        let result
+
+        switch (operation) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                if (b == 0) {
+                    result = "Không thể chia cho 0"
+                } else {
+                    result = a / b
+                }
+                break;
+        }
+        document.getElementById("result-calculate").innerHTML = result;
+    }
+
+    // function addition() {
+    //     let a = Number(document.getElementById("numbera").value);
+    //     let b = Number(document.getElementById("numberb").value);
+    //     result = a + b;
+    //     document.getElementById("result-calculate").innerHTML = result;
+    // }
+    //
+    // function subtraction() {
+    //     let a = Number(document.getElementById("numbera").value);
+    //     let b = Number(document.getElementById("numberb").value);
+    //     result = a - b;
+    //     document.getElementById("result-calculate").innerHTML = result;
+    // }
+    //
+    // function multiplication() {
+    //     let a = Number(document.getElementById("numbera").value);
+    //     let b = Number(document.getElementById("numberb").value);
+    //     result = a * b;
+    //     document.getElementById("result-calculate").innerHTML = result;
+    // }
+    //
+    // function division() {
+    //     let a = Number(document.getElementById("numbera").value);
+    //     let b = Number(document.getElementById("numberb").value);
+    //     result = a / b;
+    //     document.getElementById("result-calculate").innerHTML = result;
+    // }
+</script>
+</body>
+</html>
