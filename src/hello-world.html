@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Profile - Đỗ Khánh Vũ</title>
     <link rel="stylesheet" href="index.css">
-
+    <script src="hello-world.js"></script>
 </head>
 <body>
 
@@ -12,8 +12,13 @@
 
     <h1>Đỗ Khánh Vũ</h1>
 
-    <img src="image/avatar-dep-2.jpg" alt="Avatar" class="avatar">
-
+    <div>
+        <img src="image/avatar-dep-2.jpg" alt="Avatar" class="avatar" id="avatar">
+        <div class="button-group">
+            <button class="btn" id="btn-show">Hiện</button>
+            <button class="btn" id="btn-hide">Ẩn</button>
+        </div>
+    </div>
     <div class="section">
         <h3>🎯 Về tôi</h3>
 
@@ -24,7 +29,7 @@
                 </th>
                 <th>
                     Tuổi
-                 </th>
+                </th>
                 <th>
                     Trường học
                 </th>
@@ -48,9 +53,13 @@
 
     <div class="section">
         <h3>🎵 Nhạc yêu thích</h3>
-        <audio controls>
+        <audio id="play-music">
             <source src="audio/nhackiemdaubaygio.mp3" type="audio/mpeg">
         </audio>
+        <div class="button-group">
+            <button class="btn" id="btn-start">Start</button>
+            <button class="btn" id="btn-stop">Stop</button>
+        </div>
     </div>
 
     <div class="section">
@@ -62,9 +71,10 @@
     </div>
 
     <div class="question">
-        <form action="question.html">
-            <button class="btn">Câu hỏi</button>
-        </form>
+
+        <!--        <form action="question.html">-->
+        <!--            <button class="btn">Câu hỏi</button>-->
+        <!--        </form>-->
     </div>
 
 </div>
@@ -92,4 +102,30 @@
 <!--    </form>-->
 
 </body>
+<script>
+    let avatar = document.getElementById("avatar");
+
+    let btnShow = document.getElementById("btn-show");
+    let btnHide = document.getElementById("btn-hide");
+
+    btnShow.addEventListener("click", function () {
+        avatar.style.visibility = "visible";
+    })
+
+    btnHide.addEventListener("click", function () {
+        avatar.style.visibility = "hidden";
+    })
+
+    let music = document.getElementById("play-music");
+    let btnPlay = document.getElementById("btn-start");
+    let btnStop = document.getElementById("btn-stop");
+
+    btnPlay.addEventListener("click", function () {
+        music.play();
+    })
+
+    btnStop.addEventListener("click", function () {
+        music.pause();
+    })
+</script>
 </html>

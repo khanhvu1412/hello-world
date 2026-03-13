@@ -1,60 +1,79 @@
-body{
+body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#74ebd5,#acb6e5);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.card{
-    background:white;
-    width:350px;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+.card {
+    background: white;
+    width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.avatar{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-    border:4px solid #4CAF50;
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #4CAF50;
 }
 
-h1{
-    margin:10px 0;
-    color:#333;
+.avatar:hover {
+    transform: scale(1.1)
 }
 
-.section{
-    margin-top:15px;
-    text-align:left;
+h1 {
+    margin: 10px 0;
+    color: #333;
 }
 
-.section h3{
-    margin-bottom:5px;
-    color:#4CAF50;
+.section {
+    margin-top: 15px;
+    text-align: left;
 }
 
-audio{
-    width:100%;
-    margin-top:5px;
+.section h3 {
+    margin-bottom: 5px;
+    color: #4CAF50;
 }
 
-.question .btn{
-    width: 100px;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #4CAF50;
+audio {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 110px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
     color: white;
     border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.question .btn:hover {
-    background-color: #8dff8e;
-    color: #4CAF50;
+.btn:hover {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
