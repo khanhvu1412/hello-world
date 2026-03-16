@@ -1,4 +1,3 @@
-// Bài thực hành 1
 let year = parseInt(prompt("Nhập năm muốn kiểm tra: "));
 let isLeapYear = false;
 
