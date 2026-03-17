@@ -1,6 +1,6 @@
-let good = document.querySelector(".good input");
-let cheap = document.querySelector(".cheap input");
-let fast = document.querySelector(".fast input");
+let good = document.getElementById("good");
+let cheap = document.getElementById("cheap");
+let fast = document.getElementById("fast");
 
 good.addEventListener("change", () => handleChange(good));
 cheap.addEventListener("change", () => handleChange(cheap));
