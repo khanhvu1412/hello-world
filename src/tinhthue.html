@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Tính thuế TNCN</h1>
+
+    <input type="number" id="income" placeholder="Nhập thu nhập (VND)">
+
+    <button onclick="tinhThue()">Tính thuế</button>
+
+    <span id="result"></span>
+</div>
+
+<script>
+    function tinhThue() {
+        let thuNhap = Number(document.getElementById("income").value);
+        let thue = 0;
+        let bac;
+
+        if (thuNhap <= 5000000) {
+            bac = 1;
+        } else if (thuNhap <= 10000000) {
+            bac = 2;
+        } else if (thuNhap <= 18000000) {
+            bac = 3;
+        } else if (thuNhap <= 32000000) {
+            bac = 4;
+        } else if (thuNhap <= 52000000) {
+            bac = 5;
+        } else if (thuNhap <= 80000000) {
+            bac = 6;
+        } else {
+            bac = 7;
+        }
+
+        switch (bac) {
+            case 1:
+                thue = thuNhap * 0.05;
+                break;
+            case 2:
+                thue = 5000000 * 0.05 + (thuNhap - 5000000) * 0.1;
+                break;
+            case 3:
+                thue = 5000000 * 0.05 + 5000000 * 0.1 + (thuNhap - 10000000) * 0.15;
+                break;
+            case 4:
+                thue = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + (thuNhap - 18000000) * 0.2;
+                break;
+            case 5:
+                thue = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + (thuNhap - 32000000) * 0.25;
+                break;
+            case 6:
+                thue = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + 20000000 * 0.25 + (thuNhap - 52000000) * 0.3;
+                break;
+            case 7:
+                thue = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + 20000000 * 0.25 + 28000000 * 0.3 + (thuNhap - 80000000) * 0.35;
+                break;
+        }
+
+        document.getElementById("result").innerText =
+            "Thuế phải đóng: " + thue.toLocaleString() + " VNĐ";
+    }
+</script>
+
+</body>
+</html>
