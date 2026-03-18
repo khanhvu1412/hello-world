@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành vòng lặp</title>
+</head>
+<body>
+<h1>Vòng lặp</h1>
+<p>Bài 1</p>
+<!--<span id="result"></span>-->
+
+<p>Bài 2</p>
+<span id="result"></span>
+</body>
+<script>
+    // Part 1
+    // Bài 1
+    // let text = '';
+    // let i;
+    // for (i = 0; i < 5; i++) {
+    //     text += "The number is " + i + "<br/>"
+    // }
+    // document.getElementById("result").innerHTML = text;
+    // Bài 2
+
+    let num = Number(prompt("Nhập số: "));
+    let total = 0;
+
+    let i;
+
+    for (i = 0; i <= num; i++){
+        total = total + i ;
+    }
+
+    document.getElementById("result").innerHTML = total;
+</script>
+</html>
