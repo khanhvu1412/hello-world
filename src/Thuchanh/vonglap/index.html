@@ -14,6 +14,8 @@
 </body>
 <script>
     // Part 1
+
+    // Sử dụng vòng lặp for
     // Bài 1
     // let text = '';
     // let i;
@@ -22,16 +24,36 @@
     // }
     // document.getElementById("result").innerHTML = text;
     // Bài 2
+    // let num = Number(prompt("Nhập số: "));
+    // let total = 0;
+    //
+    // let i;
+    //
+    // for (i = 0; i <= num; i++){
+    //     total = total + i ;
+    // }
+    //
+    // document.getElementById("result").innerHTML = total;
 
-    let num = Number(prompt("Nhập số: "));
-    let total = 0;
+    // Sử dụng vòng lặp while
+    // Bài 1
+    // let total = 0;
+    // let num = Number(prompt("Nhập số:"));
+    //
+    // while (num != -1) {
+    //     total += num;
+    //     num = Number(prompt("Nhập số:"));
+    // }
+    //
+    // document.getElementById("result").innerHTML = total;
+    // Bài 2
+    let i = 1;
 
-    let i;
-
-    for (i = 0; i <= num; i++){
-        total = total + i ;
+    while (i < 50) {
+        document.write("<hr width= " + i + "%>");
+        i++;
     }
 
-    document.getElementById("result").innerHTML = total;
+
 </script>
 </html>
