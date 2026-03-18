@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <title>Vòng lặp</title>
     <style>
-        body {
-            font-family: Arial;
-            padding: 20px;
-        }
+        /*body {*/
+        /*    font-family: Arial;*/
+        /*    padding: 20px;*/
+        /*}*/
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+        /*table {*/
+        /*    border-collapse: collapse;*/
+        /*    width: 100%;*/
+        /*}*/
 
-        td {
-            border: 1px solid #999;
-            padding: 8px;
-            text-align: left;
-        }
+        /*td {*/
+        /*    border: 1px solid #999;*/
+        /*    padding: 8px;*/
+        /*    text-align: left;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -27,20 +27,47 @@
 </body>
 <script>
     // Bảng cửu chương
-    let table = "<table>";
+    // let table = "<table>";
+    //
+    // for (let i = 1; i <= 10; i++) {
+    //     table += "<tr>";
+    //
+    //     for (let j = 2; j <= 10; j++) {
+    //         table += "<td>" + j + "x" + i + "=" + (j * i) + "</td>";
+    //     }
+    //
+    //     table += "</tr>";
+    // }
+    //
+    // table += "</table>";
+    // document.getElementById("result").innerHTML = table
 
-    for (let i = 1; i <= 10; i++) {
-        table += "<tr>";
+    // Kiểm tra số nguyên tố
+    let num = Number(prompt("Nhập số cần kiểm tra: "));
+    let count = 0;
+    let N = 2;
 
-        for (let j = 2; j <= 10; j++) {
-            table += "<td>" + j + "x" + i + "=" + (j * i) + "</td>";
+    let result = "";
+
+    while (count < num) {
+        let isPrime = true;
+
+        for (let i = 2; i <= Math.sqrt(N); i++) {
+            if (N % i === 0) {
+                isPrime = false;
+                break;
+            }
         }
 
-        table += "</tr>";
+        if (isPrime) {
+            result += N + " ";
+            count++;
+        }
+        N++;
     }
 
-    table += "</table>";
-    document.getElementById("result").innerHTML = table
+    document.getElementById("result").innerHTML = result;
+
 
 </script>
 </html>
