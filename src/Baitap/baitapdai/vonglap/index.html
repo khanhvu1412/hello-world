@@ -7,134 +7,99 @@
 </head>
 <body>
 <h1>Bài tập dài</h1>
+<span id="result"></span>
 <!--Part 1-->
-<div class="part-1">
-    <h2>Phần 1</h2>
-    <div class="lesson-1-1">
-        <span id="result"></span>
-        <span>Bài 1</span>
-        <br>
-        <button onclick="dem()">Hiển thị</button>
-    </div>
+<!--<div class="part-1">-->
+<!--    <h2>Phần 1</h2>-->
+<!--    <div class="lesson-1-1">-->
+<!--        <span id="result"></span>-->
+<!--        <span>Bài 1</span>-->
+<!--        <br>-->
+<!--        <button onclick="dem()">Hiển thị</button>-->
+<!--    </div>-->
 
-    <div class="lesson-2-1">
-        <span>Bài 2</span>
-        <br>
-        <button onclick="kiemTraNhietDo()">Start</button>
-    </div>
+<!--    <div class="lesson-2-1">-->
+<!--        <span>Bài 2</span>-->
+<!--        <br>-->
+<!--        <button onclick="kiemTraNhietDo()">Start</button>-->
+<!--    </div>-->
 
-    <div class="lesson-3-1">
-        <span>Bài 3</span>
-        <br>
-        <button onclick="fibonacci()">Hiển thị 20 số</button>
-    </div>
+<!--    <div class="lesson-3-1">-->
+<!--        <span>Bài 3</span>-->
+<!--        <br>-->
+<!--        <button onclick="fibonacci()">Hiển thị 20 số</button>-->
+<!--    </div>-->
 
-    <div class="lesson-4-1">
-        <span>Bài 4</span>
-        <br>
-        <button onclick="fibonacciChiaHet5()">Hiển thị 20 số % 5</button>
-    </div>
+<!--    <div class="lesson-4-1">-->
+<!--        <span>Bài 4</span>-->
+<!--        <br>-->
+<!--        <button onclick="fibonacciChiaHet5()">Hiển thị 20 số % 5</button>-->
+<!--    </div>-->
 
-    <div class="lesson-5-1">
-        <span>Bài 5</span>
-        <br>
-        <button onclick="fibonacciSum()">Tổng 20 số đầu Fi</button>
-    </div>
+<!--    <div class="lesson-5-1">-->
+<!--        <span>Bài 5</span>-->
+<!--        <br>-->
+<!--        <button onclick="fibonacciSum()">Tổng 20 số đầu Fi</button>-->
+<!--    </div>-->
 
-    <div class="lesson-6-1">
-        <span>Bài 6</span>
-        <br>
-        <button onclick="tongChiaHet7()">Tổng 30 số chia hêt cho 7</button>
-    </div>
+<!--    <div class="lesson-6-1">-->
+<!--        <span>Bài 6</span>-->
+<!--        <br>-->
+<!--        <button onclick="tongChiaHet7()">Tổng 30 số chia hêt cho 7</button>-->
+<!--    </div>-->
 
-    <div class="lesson-7-1">
-        <span>Bài 7</span>
-        <br>
-        <button onclick="fizzBuzz()">Đếm số</button>
-    </div>
+<!--    <div class="lesson-7-1">-->
+<!--        <span>Bài 7</span>-->
+<!--        <br>-->
+<!--        <button onclick="fizzBuzz()">Đếm số</button>-->
+<!--    </div>-->
 
-    <div class="lesson-8-1">
-        <span>Bài 8</span>
-        <br>
-        <button onclick="doanSo()">Đoán số</button>
-    </div>
-</div>
+<!--    <div class="lesson-8-1">-->
+<!--        <span>Bài 8</span>-->
+<!--        <br>-->
+<!--        <button onclick="doanSo()">Đoán số</button>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <!--Part 2-->
-<!--<div class="part-2">-->
-<!--    <h2>Phần 2</h2>-->
-<!--    <div class="lesson-1-2">-->
-<!--        <span>Bài 1</span>-->
-<!--        <br>-->
-<!--        <button onclick="chuyenDoiDo()">Đổi độ</button>-->
-<!--    </div>-->
+<div class="part-2">
+    <h2>Phần 2</h2>
+    <div class="lesson-1-2">
+        <span>Bài 1</span>
+        <br>
+        <button onclick="dayFibonaci()">Dãy Fibonaci</button>
+    </div>
 
-<!--    <div class="lesson-2-2">-->
-<!--        <span>Bài 2</span>-->
-<!--        <br>-->
-<!--        <button onclick="chuyenDoiDoDai()">Đổi m - ft</button>-->
-<!--    </div>-->
+        <div class="lesson-2-2">
+            <span>Bài 2</span>
+            <br>
+            <button onclick="tinhGiaiThua()">Tính giai thừa số dương</button>
+        </div>
 
-<!--    <div class="lesson-3-2">-->
-<!--        <span>Bài 3</span>-->
-<!--        <br>-->
-<!--        <button onclick="dienTichHinhVuong()">Tính S vuông</button>-->
-<!--    </div>-->
+        <div class="lesson-3-2">
+            <span>Bài 3</span>
+            <br>
+            <button onclick="inTamGiacVuong()">In tam giác vuông</button>
+        </div>
 
-<!--    <div class="lesson-4-2">-->
-<!--        <span>Bài 4</span>-->
-<!--        <br>-->
-<!--        <button onclick="dienTichHinhChuNhat()">Tính S  chữ nhật</button>-->
-<!--    </div>-->
+        <div class="lesson-4-2">
+            <span>Bài 4</span>
+            <br>
+            <button onclick="inHinhChuNhat()">In hình chữ nhật</button>
+        </div>
 
-<!--    <div class="lesson-5-2">-->
-<!--        <span>Bài 5</span>-->
-<!--        <br>-->
-<!--        <button onclick="dienTichtamGiacVuong()">Tính S tam giác vuông</button>-->
-<!--    </div>-->
+        <div class="lesson-5-2">
+            <span>Bài 5</span>
+            <br>
+            <button onclick="laiNganHang()">Tính lãi ngân hàng</button>
+        </div>
 
-<!--    <div class="lesson-6-2">-->
-<!--        <span>Bài 6</span>-->
-<!--        <br>-->
-<!--        <button onclick="phuongTrinhBac1()">Phương trình bậc 1</button>-->
-<!--    </div>-->
-
-<!--    <div class="lesson-7-2">-->
-<!--        <span>Bài 7</span>-->
-<!--        <br>-->
-<!--        <button onclick="phuongTrinhBac2()">Phương trình bậc 2</button>-->
-<!--    </div>-->
-
-<!--    <div class="lesson-8-2">-->
-<!--        <span>Bài 8</span>-->
-<!--        <br>-->
-<!--        <button onclick="checkTuoi()">Kiểm tra tuổi</button>-->
-<!--    </div>-->
-
-<!--    <div class="lesson-9-2">-->
-<!--        <span>Bài 9</span>-->
-<!--        <br>-->
-<!--        <button onclick="checkCanhTamGiac()">Kiểm tra cạnh tam giác</button>-->
-<!--    </div>-->
-
-<!--    <div class="lesson-10-2">-->
-<!--        <span>Bài 10</span>-->
-<!--        <br>-->
-<!--        <button onclick="tinhGiaDien()">Tính giá điện</button>-->
-<!--    </div>-->
-
-<!--    <div class="lesson-11-2">-->
-<!--        <span>Bài 11</span>-->
-<!--        <br>-->
-<!--        <button onclick="theThuNhapCaNhan()">Tính thuế thu nhập cá nhân</button>-->
-<!--    </div>-->
-
-<!--    <div class="lesson-12-2">-->
-<!--        <span>Bài 12</span>-->
-<!--        <br>-->
-<!--        <button onclick="laiNganHang()">Tính lãi ngân hàng</button>-->
-<!--    </div>-->
+        <div class="lesson-6-2">
+            <span>Bài 6</span>
+            <br>
+            <button onclick="inHinhTraiTim()">In hình trái tim</button>
+        </div>
 
 
 </div>
