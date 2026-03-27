@@ -20,16 +20,34 @@
 // }
 
 // Thực hành 2
-let x = [-3, 5, 1, 3, 2, 10];
+// let x = [-3, 5, 1, 3, 2, 10];
+//
+// let first = 0;
+// let last = x.length - 1;
+//
+// while (first < last) {
+//     let b = x[first];
+//     x[first] = x[last];
+//     x[last] = b;
+//     first++;
+//     last--;
+// }
+// document.write(x);
 
-let first = 0;
-let last = x.length - 1;
+// Thực hành 3
+let value = prompt("Enter the number: ");
+let numbers = [-3, 5, 1, 3, 2, 10];
+let index = -1;
 
-while (first < last) {
-    let b = x[first];
-    x[first] = x[last];
-    x[last] = b;
-    first++;
-    last--;
+for (let i = 0; i < numbers.length; i++) {
+    if (value == numbers[i]) {
+        // alert("Value " + numbers[i] + " found it " + i);
+        index = i;
+    }
 }
-document.write(x);
+
+if (index > -1) {
+    alert("Value " + value + " found at " + index);
+} else {
+    alert("Value " + value + " not found");
+}
