@@ -35,19 +35,34 @@
 // document.write(x);
 
 // Thực hành 3
-let value = prompt("Enter the number: ");
-let numbers = [-3, 5, 1, 3, 2, 10];
-let index = -1;
+// let value = prompt("Enter the number: ");
+// let numbers = [-3, 5, 1, 3, 2, 10];
+// let index = -1;
+//
+// for (let i = 0; i < numbers.length; i++) {
+//     if (value == numbers[i]) {
+//         // alert("Value " + numbers[i] + " found it " + i);
+//         index = i;
+//     }
+// }
+//
+// if (index > -1) {
+//     alert("Value " + value + " found at " + index);
+// } else {
+//     alert("Value " + value + " not found");
+// }
+
+// Thực hành 4
+let numbers = [-3, 5, 122, 3, 2, 10, 20];
+
+let max = numbers[0];
+let index = 0;
 
 for (let i = 0; i < numbers.length; i++) {
-    if (value == numbers[i]) {
-        // alert("Value " + numbers[i] + " found it " + i);
+    if (numbers[i] > max) {
+        max = numbers[i];
         index = i;
     }
 }
 
-if (index > -1) {
-    alert("Value " + value + " found at " + index);
-} else {
-    alert("Value " + value + " not found");
-}
+alert("max " + max + " at position " + index);
