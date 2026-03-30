@@ -14,25 +14,25 @@
 
 // Bài 2
 function doi() {
-    let footValue = Number(document.getElementById("footValue").value);
+    let feetValue = Number(document.getElementById("feetValue").value);
     let meterValue = Number(document.getElementById("meterValue").value);
 
-    function footToMeter(foot) {
-        return 0.305 * foot;
+    function feetToMeter(feet) {
+        return 0.305 * feet;
     }
 
-    function meterToFoot(meter) {
+    function meterToFeet(meter) {
         return 3.279 * meter;
     }
 
     let result = "";
 
-    if (footValue && meterValue) {
-        let meter = footToMeter(footValue);
-        let foot = meterToFoot(meterValue);
+    if (feetValue || meterValue) {
+        let meter = feetToMeter(feetValue);
+        let feet = meterToFeet(meterValue);
 
-        result = footValue + " foot = " + meter.toFixed(2) + " meter" + "<br/>" +
-            meterValue + " meter = " + foot.toFixed(2) + " foot";
+        result = feetValue + " feet = " + meter.toFixed(2) + " meter" + "<br/>" +
+            meterValue + " meter = " + feet.toFixed(2) + " feet";
     } else {
         result = "Vui lòng nhập giá trị.";
     }
