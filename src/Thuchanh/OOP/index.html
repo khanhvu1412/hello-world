@@ -5,10 +5,11 @@
     <title>Funny Circle</title>
 </head>
 <body>
-<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3"></canvas>
+<!--<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3"></canvas>-->
 </body>
 
 <script>
+    // Thực hành 1
     // function MyDate(day, month, year) {
     //     this.day = day;
     //     this.month = month;
@@ -66,6 +67,7 @@
     // alert(day + "/" + month + "/" + year)
     // console.log(date.toString());
 
+    // Thực hành 2
     // function Circle(radius) {
     //     this.radius = radius;
     //
@@ -87,47 +89,108 @@
     // alert("Radius: " + radius + "; Area: " + area.toFixed(3));
     //
 
-    function Circle(x, y, radius) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-    }
+    // Thực hành 3
+    // function Circle(x, y, radius) {
+    //     this.x = x;
+    //     this.y = y;
+    //     this.radius = radius;
+    // }
+    //
+    // function getRandomHex() {
+    //     return Math.floor(Math.random() * 255);
+    // }
+    //
+    // function getRandomColor() {
+    //     var red = getRandomHex();
+    //     var green = getRandomHex();
+    //     var blue = getRandomHex();
+    //
+    //     return "rgb(" + red + "," + green + "," + blue + ")";
+    // }
+    //
+    // function createCircle() {
+    //     var ctx = document.getElementById("myCanvas").getContext("2d");
+    //     var radius = Math.floor(Math.random() * 80);
+    //     var color = getRandomColor();
+    //     var x = Math.random() * window.innerWidth;
+    //     var y = Math.random() * window.innerHeight;
+    //     var circle = new Circle(x, y, radius);
+    //     ctx.beginPath();
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    //     ctx.fillStyle = color;
+    //     ctx.fill();
+    // }
+    //
+    // function createMultipleCircle() {
+    //     for (let i = 0; i < 100; i++) {
+    //         createCircle();
+    //     }
+    // }
+    //
+    // createMultipleCircle();
+    // createCircle();
+    // createCircle();
 
-    function getRandomHex() {
-        return Math.floor(Math.random() * 255);
-    }
+    // Thực hành 4
+    function Battery() {
+        this.setEnergy = function (energy) {
+            this.energy = energy;
+        };
 
-    function getRandomColor() {
-        var red = getRandomHex();
-        var green = getRandomHex();
-        var blue = getRandomHex();
+        this.getEnergy = function () {
+            return this.energy;
+        };
 
-        return "rgb(" + red + "," + green + "," + blue + ")";
-    }
-
-    function createCircle() {
-        var ctx = document.getElementById("myCanvas").getContext("2d");
-        var radius = Math.floor(Math.random() * 80);
-        var color = getRandomColor();
-        var x = Math.random() * window.innerWidth;
-        var y = Math.random() * window.innerHeight;
-        var circle = new Circle(x, y, radius);
-        ctx.beginPath();
-        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
-        ctx.fillStyle = color;
-        ctx.fill();
-    }
-
-    function createMultipleCircle() {
-        for (let i = 0; i < 100; i++) {
-            createCircle();
+        this.decreaseEnergy = function () {
+            if (this.energy > 0) {
+                this.energy--;
+            }
         }
     }
 
-    createMultipleCircle();
-    // createCircle();
-    // createCircle();
+    function FlashLamp() {
+        this.setBattery = function (battery) {
+            this.battery = battery;
+        };
 
+        this.getBatteryInfo = function () {
+            return this.battery.getEnergy();
+        }
+
+        this.light = function () {
+            if (this.status) {
+                alert("Lighting");
+            } else {
+                alert("Not Lighting");
+            }
+        }
+
+        this.turnOn = function () {
+            this.status = true;
+        }
+
+        this.turnOff = function () {
+            this.status = false;
+        }
+    }
+
+    let battery = new Battery();
+    battery.setEnergy(10);
+
+    let flashLamp = new FlashLamp();
+    flashLamp.setBattery(battery);
+
+    document.write("Battery info: " + flashLamp.getBatteryInfo() + "<br/>");
+    flashLamp.light();
+
+    document.write("Turn on <br/>");
+    flashLamp.turnOn();
+    flashLamp.light();
+    document.write("Battery info: " + flashLamp.getBatteryInfo() + "<br/>");
+
+    document.write("Turn off < br/>");
+    flashLamp.turnOff();
+    flashLamp.light();
 
 </script>
 </html>
