@@ -62,25 +62,117 @@
 // myRectangle.draw(ctx);
 
 // Bài tập 2
-class Temperature {
-    celsius;
+// class Temperature {
+//     celsius;
+//
+//     constructor(celsius) {
+//         this.celsius = celsius;
+//     }
+//
+//     toFahrenheit() {
+//         return 9 / 5 * this.celsius + 32;
+//     }
+//
+//     toKelvins() {
+//         return this.celsius + 273.15;
+//     }
+// }
+//
+// let temperature = new Temperature(28);
+//
+// let my_fahrenheit = temperature.toFahrenheit();
+// let my_kelvin = temperature.toKelvins();
+//
+// document.getElementById("result").innerHTML = "Nhiệt độ F: " + my_fahrenheit + "<br/>" + "Nhiệt độ K: " + my_kelvin;
 
-    constructor(celsius) {
-        this.celsius = celsius;
+// Bài tập 3
+class Mobile {
+    constructor(name) {
+        this.name = name;      // tên điện thoại
+        this.battery = 100;    // pin tối đa 100
+        this.isOn = false;     // trạng thái bật/tắt
+
+        this.draft = "";       // tin đang soạn
+        this.inbox = [];       // hộp thư đến
+        this.sent = [];        // tin đã gửi
     }
 
-    toFahrenheit() {
-        return 9 / 5 * this.celsius + 32;
+    checkStatus() {
+        return this.isOn;
     }
 
-    toKelvins() {
-        return this.celsius + 273.15;
+    turnOn() {
+        this.isOn = true;
+        console.log(this.name + " đã bật");
+    }
+
+    turnOff() {
+        this.isOn = false;
+        console.log(this.name + " đã tắt");
+    }
+
+    charge() {
+        this.battery = 100;
+        console.log(this.name + " đã sạc đầy");
+    }
+
+    useBattery() {
+        if (this.battery > 0) {
+            this.battery--;
+        }
+    }
+
+    composeMessage(message) {
+        if (!this.isOn) return console.log(this.name + " đang tắt");
+        this.draft = message;
+        this.useBattery();
+    }
+
+    sendMessage(receiver) {
+        if (!this.isOn) return console.log(this.name + " đang tắt");
+        if (this.draft === "") return console.log("Chưa có tin để gửi");
+
+        receiver.receiveMessage(this.draft);
+        this.sent.push(this.draft);
+
+        console.log(this.name + " gửi " + this.draft);
+
+        this.draft = "";
+        this.useBattery();
+    }
+
+    receiveMessage(message) {
+        if (!this.isOn) return; // Máy tắt thì không nhận
+        this.inbox.push(message);
+        this.useBattery();
+    }
+
+    viewInbox() {
+        if (!this.isOn) return console.log(this.name + " đang tắt");
+        console.log(this.name + " - Inbox: " + this.inbox);
+        this.useBattery()
+    }
+
+    viewSent() {
+        if (!this.isOn) return console.log(this.name + " đang tắt")
+        console.log(this.name + " - Sent: " + this.sent);
+        this.useBattery();
     }
 }
 
-let temperature = new Temperature(28);
+let iphone = new Mobile("Iphone");
+let nokia = new Mobile("Nokia");
 
-let my_fahrenheit = temperature.toFahrenheit();
-let my_kelvin = temperature.toKelvins();
+iphone.turnOn();
+nokia.turnOn();
 
-document.getElementById("result").innerHTML = "Nhiệt độ F: " + my_fahrenheit + "<br/>" + "Nhiệt độ K: " + my_kelvin;
+nokia.composeMessage("Xin chào Iphone!");
+nokia.sendMessage(iphone);
+
+iphone.viewInbox();
+iphone.composeMessage("Xin chào Nokia!");
+iphone.sendMessage(nokia);
+
+
+
+
