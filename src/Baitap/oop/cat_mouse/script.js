@@ -1,4 +1,4 @@
-class Mouse {
+class Rat {
     constructor(name, weight, speed) {
         this.name_mouse = name;
         this.weight_mouse = weight;
@@ -61,7 +61,7 @@ class Cat {
     }
 }
 
-let jelly = new Mouse("Jelly", 10, 100);
+let jelly = new Rat("Jelly", 10, 100);
 let tom = new Cat("Tom", 20, 200);
 
 jelly.soundMouse();
